@@ -25,7 +25,6 @@ function SubscriptionProvider({ children }: { children: React.ReactNode }) {
           return;
         } else {
           console.log("User has subbed.");
-
           // set sub
           setSubscription(snapshot.docs[0].data());
         }

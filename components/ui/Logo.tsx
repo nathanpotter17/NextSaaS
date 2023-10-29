@@ -19,7 +19,7 @@ function Logo() {
             alt="logo"
             className="dark:filter dark:invert"
           />
-          LangHelper
+          NextSoftware
         </AspectRatio>
       </div>
     </Link>

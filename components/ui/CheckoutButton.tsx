@@ -4,7 +4,6 @@ import { db } from "@/firebase";
 import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
-import LoadingSpinner from "./LoadingSpinner";
 
 function CheckoutButton() {
   const { data: session } = useSession();

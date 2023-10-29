@@ -5,7 +5,6 @@ import { signInWithCustomToken } from "firebase/auth";
 import { Session } from "next-auth";
 import { useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { authOptions } from "@/auth";
 
 async function syncFirebaseAuth(session: Session) {
   if (session && session.firebaseToken) {

@@ -1,8 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import DemoGif from "@/images/logos/landingPage/BuildTemplate.png";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/auth";
+import { ArrowRight } from "lucide-react";
 
 export default async function Home() {
+  const session = await getServerSession(authOptions);
+
+  console.log(session?.user.id);
+
   return (
     <main className="">
       <div className="relative isolate pt-14 dark:bg-gray-900">
@@ -23,12 +30,12 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              You can speak your language, they can speak theirs.
+              Selling software doesn't have to be difficult.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              You can speak your language, they can speak theirs.{" "}
+              Let us take care of what you need,{" "}
               <span className="text-indigo-600 dark:text-indigo-500">
-                Let AI Handle It.
+                and have AI at your disposal.
               </span>
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -40,9 +47,12 @@ export default async function Home() {
               </Link>
               <Link
                 href="/pricing"
-                className="text-sm font-semibold leading-6 text-gray-900 bg-gray-200 px-3.5 py-2 hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 rounded-md"
+                className="text-sm flex flex-row font-semibold leading-6 text-gray-900 bg-gray-200 px-3.5 py-2 hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 rounded-md"
               >
-                View Pricing <span aria-hidden={true}>{"->"}</span>
+                <div>View Pricing</div>
+                <div className="px-1">
+                  <ArrowRight />
+                </div>
               </Link>
             </div>
           </div>
