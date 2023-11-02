@@ -8,7 +8,7 @@ Social Sign-In via next-auth and Stripe Subscriptions.
 
 ![Registered User](./RegUser.png)
 
-![Registered User](./picing.png)
+![Registered User](./pricing.png)
 
 ![Registered User](./registerUpgrade.png)
 
